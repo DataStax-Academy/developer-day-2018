@@ -31,8 +31,19 @@ In this repository, you'll find everything from the DataStax Developer Day event
 
 #### Instructions
 * [Install DataStax Enterprise](https://docs.datastax.com/en/install/doc/install60/installTOC.html)
+
+Or use Docker :
+```
+docker run -e "DS_LICENSE=accept" -it -d -p 9042:9042 --name dse datastax/dse-server -s -g
+```
+
 * [Install DataStax Studio](https://docs.datastax.com/en/install/doc/install60/installStudio.html)
    - The notebooks below should be [imported](https://docs.datastax.com/en/studio/6.0/studio/importNotebook.html) and opened in DataStax Studio
+
+Or use Docker :
+```
+docker run -e "DS_LICENSE=accept" -it -d -p 9091:9091 --link dse:dse datastax/dse-studio
+```
 
 #### Core Cassandra
 | Notebooks | Setup Notes
