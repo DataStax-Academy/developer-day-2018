@@ -45,6 +45,11 @@ Or use Docker :
 docker run -e "DS_LICENSE=accept" -it -d -p 9091:9091 --link dse:dse datastax/dse-studio
 ```
 
+_If you are using docker DSE Server you may have to change the KeyspaceDefinition with_
+```
+CREATE KEYSPACE IF NOT EXISTS killrvideo WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+```
+
 #### Core Cassandra
 | Notebooks | Setup Notes
 |---|---|
